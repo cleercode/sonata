@@ -46,7 +46,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2012-06-23T22:21:00.111</Modified>
+      <Modified>2012-06-23T22:33:53.560</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\jquery-1.7.2.min.js">
       <PackagePath>js\jquery-1.7.2.min.js</PackagePath>

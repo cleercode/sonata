@@ -43,26 +43,27 @@
     };
 
     app.gatherArtists = function (artist) {
-        //$('#artists').fadeOut();
-        //loadingOn();
-        //$('#artists').children().remove();
-
-        app.lastfm.artist.getSimilar({
-            artist: artist
-        },
-        {
-            success: function (data) {
-                var artists = data.similarartists.artist;
-                for (var i = 1; i < artists.length; i++) {
-                    if (artists[i].image[1]['#text'] != "") app.setupImage(artists[i]);
-                }
-                $('#artists').fadeIn();
-                loadingOff();
-            },
-            error: function (code, message) {
-                alert('Unable to retrieve data from last.fm');
-            }
-        });
+        //app.lastfm.artist.getSimilar({
+        //    artist: artist
+        //},
+        //{
+        //    success: function (data) {
+        //        var artists = data.similarartists.artist;
+        //        for (var i = 1; i < artists.length; i++) {
+        //            if (artists[i].image[1]['#text'] != "") app.setupImage(artists[i]);
+        //        }
+        //        $('#artists').fadeIn();
+        //        loadingOff();
+        //    },
+        //    error: function (code, message) {
+        //        alert('Unable to retrieve data from last.fm');
+        //    }
+        //});
+        var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=cher&api_key=b25b959554ed76058ac220b7b2e0a026&format=json";
+        WinJS.xhr({ url: url, responseType: "json" })
+            .done(function complete(result) {
+                console.log(result);
+            });
     };
 
     app.setupImage = function (artist) {
