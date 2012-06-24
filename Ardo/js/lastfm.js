@@ -4,11 +4,12 @@
     var key = "b25b959554ed76058ac220b7b2e0a026";
 
     var getSimilarArtists = function (artist, callback, error) {
-        var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + escape(artist) + "&api_key=" + key + "&format=json";
-        WinJS.xhr({ url: url, responseType: "json" })
-            .done(function complete(result) {
+        var similarArtistUrl = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + escape(artist) + "&api_key=" + key + "&format=json";
+        var artistInfoUrl = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + escape(artist) + "&autocorrect=1&api_key=" + key + "&format=json";
+        var similarArtists = []
+        WinJS.xhr({ url: similarArtistUrl, responseType: "json" })
+            .then(function(result) {
                 var obj = JSON.parse(result.response);
-                var similarArtists = []
                 if (obj.similarartists && obj.similarartists.artist) {
                     obj.similarartists.artist.forEach(function (artist) {
                         for (var i = artist.image.length - 1; i >= 0; i--) {
@@ -24,8 +25,32 @@
                         }
                     });
                 }
+
+                return WinJS.xhr({ url: artistInfoUrl, responseType: "json" });
+            }, error)
+            .done(function (result) {
+                var obj = JSON.parse(result.response);
+                var hasMBID = similarArtists.reduce(function (acc, val) {
+                    return acc || (val.mbid == obj.artist.mbid);
+                }, false);
+
+                if (!hasMBID) {
+                    for (var i = obj.artist.image.length - 1; i >= 0; i--) {
+                        if (obj.artist.image[i]["#text"] != "") {
+                            similarArtists.unshift({
+                                "img": obj.artist.image[i]["#text"],
+                                "name": obj.artist.name,
+                                "score": 1,
+                                "mbid": obj.artist.mbid,
+                            });
+                            break;
+                        }
+                    }
+                }
+
                 callback(similarArtists);
-            }, error);
+
+            });
     };
 
     var getArtistInfo = function(mbid, callback, error) {
