@@ -16,7 +16,7 @@
 
             listView.itemDataSource = list.dataSource;
             listView.groupDataSource = null;
-            listView.layout = new ui.ListLayout();
+            listView.layout = new ui.GridLayout();
         },
 
         itemInvoked: function (args) {
