@@ -1,4 +1,7 @@
-﻿body {
+﻿
+header {
+    background: #c30;
+    padding: 20px;
 }
 
 @media screen and (-ms-view-state: fullscreen-landscape) {
