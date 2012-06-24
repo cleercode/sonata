@@ -58,9 +58,7 @@
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="js\jquery-1.7.2.min.js" />
-    <Content Include="js\lastfm.api.cache.js" />
-    <Content Include="js\lastfm.api.js" />
-    <Content Include="js\lastfm.api.md5.js" />
+    <Content Include="js\lastfm.js" />
     <Content Include="js\youtube.js" />
     <Content Include="packages.config" />
     <None Include="Ardo_TemporaryKey.pfx" />

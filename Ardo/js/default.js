@@ -19,16 +19,12 @@
             args.setPromise(WinJS.UI.processAll());
         }
 
-        app.cache = new LastFMCache();
-        app.lastfm = new LastFM({
-            apiKey: '80a188b0bc2bbad47509ece49e5504c5',
-            apiSecret: 'df1faefee53e9ae601255b0220bd5113',
-            cache: app.cache
-        });
-
         $('form').submit(function () {
             var artist = $('#artist').val();
-            app.gatherArtists(artist);
+            Lastfm.getSimilarArtists(artist,
+                function (artists) {
+                    artists;
+                });
             return false;
         });
     };
@@ -40,39 +36,6 @@
         // saved and restored across suspension. If you need to complete an
         // asynchronous operation before your application is suspended, call
         // args.setPromise().
-    };
-
-    app.gatherArtists = function (artist) {
-        //app.lastfm.artist.getSimilar({
-        //    artist: artist
-        //},
-        //{
-        //    success: function (data) {
-        //        var artists = data.similarartists.artist;
-        //        for (var i = 1; i < artists.length; i++) {
-        //            if (artists[i].image[1]['#text'] != "") app.setupImage(artists[i]);
-        //        }
-        //        $('#artists').fadeIn();
-        //        loadingOff();
-        //    },
-        //    error: function (code, message) {
-        //        alert('Unable to retrieve data from last.fm');
-        //    }
-        //});
-        var artist = escape(artist);
-        var key = "b25b959554ed76058ac220b7b2e0a026";
-        var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + artist + "&api_key=" + key + "&format=json";
-        WinJS.xhr({ url: url, responseType: "json" })
-            .done(function complete(result) {
-                var obj = JSON.parse(result.response);
-                var similarArtists = obj.similarartists.artist;
-                similarArtists.forEach(function (artist) {
-                    var photo = artist.image[3]["#text"];
-                    if (photo !== "") {
-                        console.log(photo);
-                    }
-                });
-            });
     };
 
     app.setupImage = function (artist) {
