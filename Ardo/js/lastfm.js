@@ -9,19 +9,21 @@
             .done(function complete(result) {
                 var obj = JSON.parse(result.response);
                 var similarArtists = []
-                obj.similarartists.artist.forEach(function (artist) {
-                    for (var i = artist.image.length - 1; i >= 0; i--) {
-                        if (artist.image[i]["#text"] != "") {
-                            similarArtists.push({
-                                "img": artist.image[i]["#text"],
-                                "name": artist.name,
-                                "score": artist.match,
-                                "mbid": artist.mbid,
-                            });
-                            break;
+                if (obj.similarArtists && obj.similarArtists.artist) {
+                    obj.similarartists.artist.forEach(function (artist) {
+                        for (var i = artist.image.length - 1; i >= 0; i--) {
+                            if (artist.image[i]["#text"] != "") {
+                                similarArtists.push({
+                                    "img": artist.image[i]["#text"],
+                                    "name": artist.name,
+                                    "score": artist.match,
+                                    "mbid": artist.mbid,
+                                });
+                                break;
+                            }
                         }
-                    }
-                });
+                    });
+                }
                 callback(similarArtists);
             }, error);
     };
