@@ -14,15 +14,9 @@
         initializeLayout: function (listView, viewState) {
             /// <param name="listView" value="WinJS.UI.ListView.prototype" />
 
-            if (viewState === appViewState.snapped) {
-                listView.itemDataSource = list.dataSource;
-                listView.groupDataSource = null;
-                listView.layout = new ui.ListLayout();
-            } else {
-                listView.itemDataSource = list.dataSource;
-                listView.groupDataSource = Data.groups.dataSource;
-                listView.layout = new ui.GridLayout({ groupHeaderPosition: "top" });
-            }
+            listView.itemDataSource = list.dataSource;
+            listView.groupDataSource = null;
+            listView.layout = new ui.ListLayout();
         },
 
         itemInvoked: function (args) {
@@ -48,7 +42,7 @@
             this.initializeLayout(listView, appView.value);
             listView.element.focus();
 
-            Lastfm.getEvents(function () { });
+            //Lastfm.getEvents(function () { });
             $('form').submit(function () {
                 var artist = $('#artist').val();
                 Lastfm.getSimilarArtists(artist,
