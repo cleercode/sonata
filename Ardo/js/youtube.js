@@ -11,14 +11,18 @@
                 return;
             }
 
-            var song = obj.data.items[0];
-            var songData = {
-                "url": song.player.default,
-                "thumbnail": (song.thumbnail.hqDefault ?
-                    song.thumbnail.hqDefault : song.thumbnail.sqDefault),
-                "title": song.title
-            };
-            callback(songData);
+            var songs = [];
+            var length = Math.min(2, obj.data.items.length);
+            for (var i = 0; i < length; i++) {
+                var song = obj.data.items[i];
+                var songData = {
+                    "url": song.player.default,
+                    "thumbnail": song.thumbnail.sqDefault,
+                    "title": song.title
+                };
+                songs.push(songData);
+            }
+            callback(songs);
         }, error);
 
     }

@@ -16,15 +16,17 @@
             var artist = options.artist;
             element.querySelector(".titlearea .pagetitle").textContent = artist.name;
             element.querySelector("article .item-image").style.backgroundImage = artist.imgURL;
-            element.querySelector("article .item-image").alt = artist.score;
             element.querySelector(".content").focus();
 
             Lastfm.getArtistInfo(artist.mbid, function (result) {
-                element.querySelector("article .item-content").innerHTML = result.bio.replace(/User-contributed text.+/g, '');
+                element.querySelector("article .item-content").innerHTML = result.summary.replace(/User-contributed text.+/g, '');
             });
 
-            Youtube.getSongs(artist.name, function (result) {
-                console.log(result);
+            Youtube.getSongs(artist.name, function (songs) {
+                songs.forEach(function (song) {
+                    var songEl = $('<a href="' + song.url + '"><img src="' + song.thumbnail + '" />' + song.title + '</a>');
+                    $('.videolist').append(songEl);
+                });
             });
         }
     });
