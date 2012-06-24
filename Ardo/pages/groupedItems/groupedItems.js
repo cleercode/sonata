@@ -49,7 +49,7 @@
                 Lastfm.getSimilarArtists(artist,
                     function (artists) {
                         artists.forEach(function (artist) {
-                            //artist.img = "url('" + artist.img + "')";
+                            artist.img = "url('" + artist.img + "')";
                             list.push(artist);
                         });
                         list.notifyReload();

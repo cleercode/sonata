@@ -9,7 +9,7 @@
             .done(function complete(result) {
                 var obj = JSON.parse(result.response);
                 var similarArtists = []
-                if (obj.similarArtists && obj.similarArtists.artist) {
+                if (obj.similarartists && obj.similarartists.artist) {
                     obj.similarartists.artist.forEach(function (artist) {
                         for (var i = artist.image.length - 1; i >= 0; i--) {
                             if (artist.image[i]["#text"] != "") {
