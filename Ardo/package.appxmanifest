@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="Ardo" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Ardo" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" />
+      <VisualElements DisplayName="Sonata" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Beautiful music discovery." ForegroundText="light" BackgroundColor="#f26722">
+        <DefaultTile ShowName="allLogos" WideLogo="images\wide.png" />
         <SplashScreen Image="images\splashscreen.png" />
         <InitialRotationPreference>
           <Rotation Preference="portrait" />

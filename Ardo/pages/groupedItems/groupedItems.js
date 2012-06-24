@@ -47,7 +47,6 @@
                             list.push(artist);
                         });
                         list.notifyReload();
-                        console.log(list);
                     });
                 return false;
             });
