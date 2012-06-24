@@ -41,9 +41,15 @@
             }
 
             //Lastfm.getEvents(function () { });
+            // TODO: there is a concurrency bug here =[
             $('form').submit(function () {
                 WinJS.UI.Animation.fadeOut(document.getElementById('instructions'));
                 var artist = $('#artist').val();
+                if (artist == "") {
+                    return false;
+                }
+
+                $('#artist').val("");
                 while (list.pop()) { };
                 Lastfm.getSimilarArtists(artist,
                     function (artists) {
