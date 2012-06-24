@@ -7,6 +7,30 @@
     width: 100%;
 }
 
+#instructions {
+    font-size: 36px;
+    position: absolute;
+    top: 240px;
+    left: 120px;
+}
+
+    #instructions p:before {
+        font-family: "Segoe UI Command";
+        margin-right: 20px;
+    }
+
+    #instructions p:nth-child(1):before {
+        content: "\E11A";
+    }
+    
+    #instructions p:nth-child(2):before {
+        content: "\E189";
+    }
+        
+    #instructions p:nth-child(3):before {
+        content: "\E11D";
+    }
+
 .fragment {
     /* Define a grid with rows for a banner and a body */
     -ms-grid-columns: 1fr;

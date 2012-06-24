@@ -14,12 +14,14 @@
             }
 
             var artist = options.artist;
+
+            Lastfm.getArtistInfo(artist.mbid, function (result) {
+                console.log(result);
+                element.querySelector("article .item-content").innerHTML = result.bio;
+            });
             element.querySelector(".titlearea .pagetitle").textContent = artist.name;
-            element.querySelector("article .item-title").textContent = artist.mbid;
-            element.querySelector("article .item-subtitle").textContent = artist.score;
-            element.querySelector("article .item-image").src = artist.img;
+            element.querySelector("article .item-image").style.backgroundImage = artist.imgURL;
             element.querySelector("article .item-image").alt = artist.score;
-            element.querySelector("article .item-content").innerHTML = artist.name;
             element.querySelector(".content").focus();
         }
     });
