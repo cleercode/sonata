@@ -6,6 +6,7 @@
     var nav = WinJS.Navigation;
     var ui = WinJS.UI;
     var utils = WinJS.Utilities;
+    var list = new WinJS.Binding.List();
 
     ui.Pages.define("/pages/groupedItems/groupedItems.html", {
 
@@ -14,11 +15,11 @@
             /// <param name="listView" value="WinJS.UI.ListView.prototype" />
 
             if (viewState === appViewState.snapped) {
-                listView.itemDataSource = Data.groups.dataSource;
+                listView.itemDataSource = list.dataSource;
                 listView.groupDataSource = null;
                 listView.layout = new ui.ListLayout();
             } else {
-                listView.itemDataSource = Data.items.dataSource;
+                listView.itemDataSource = list.dataSource;
                 listView.groupDataSource = Data.groups.dataSource;
                 listView.layout = new ui.GridLayout({ groupHeaderPosition: "top" });
             }
@@ -51,7 +52,11 @@
                 var artist = $('#artist').val();
                 Lastfm.getSimilarArtists(artist,
                     function (artists) {
-                        artists;
+                        artists.forEach(function (artist) {
+                            list.push(artist);
+                        });
+                        list.notifyReload();
+                        console.log(list);
                     });
                 return false;
             });
