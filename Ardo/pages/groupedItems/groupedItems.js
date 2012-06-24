@@ -14,15 +14,9 @@
         initializeLayout: function (listView, viewState) {
             /// <param name="listView" value="WinJS.UI.ListView.prototype" />
 
-            if (viewState === appViewState.snapped) {
-                listView.itemDataSource = list.dataSource;
-                listView.groupDataSource = null;
-                listView.layout = new ui.ListLayout();
-            } else {
-                listView.itemDataSource = list.dataSource;
-                listView.groupDataSource = Data.groups.dataSource;
-                listView.layout = new ui.GridLayout({ groupHeaderPosition: "top" });
-            }
+            listView.itemDataSource = list.dataSource;
+            listView.groupDataSource = null;
+            listView.layout = new ui.ListLayout();
         },
 
         itemInvoked: function (args) {
