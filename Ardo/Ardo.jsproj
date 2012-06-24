@@ -35,7 +35,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>f95c5971-6236-4721-9079-772c7e5c4856</ProjectGuid>
+    <ProjectGuid>0b96ee37-596c-4e89-a81d-58b3d312c343</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
@@ -50,17 +50,27 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="default.html" />
+    <Content Include="css\default.css" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
+    <Content Include="js\data.js" />
     <Content Include="js\default.js" />
-    <Content Include="css\default.css" />
     <Content Include="js\jquery-1.7.2.min.js" />
     <Content Include="js\lastfm.js" />
+    <Content Include="js\navigator.js" />
     <Content Include="js\youtube.js" />
-    <Content Include="packages.config" />
+    <Content Include="pages\itemDetail\itemDetail.css" />
+    <Content Include="pages\itemDetail\itemDetail.html" />
+    <Content Include="pages\itemDetail\itemDetail.js" />
+    <Content Include="pages\groupDetail\groupDetail.css" />
+    <Content Include="pages\groupDetail\groupDetail.html" />
+    <Content Include="pages\groupDetail\groupDetail.js" />
+    <Content Include="pages\groupedItems\groupedItems.css" />
+    <Content Include="pages\groupedItems\groupedItems.html" />
+    <Content Include="pages\groupedItems\groupedItems.js" />
+    <Content Include="default.html" />
     <None Include="Ardo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
