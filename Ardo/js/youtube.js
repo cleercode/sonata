@@ -3,15 +3,15 @@
 
     var baseUrl = "https://gdata.youtube.com/feeds/api/videos?v=2&alt=jsonc&category=Music&uploader=partner&q=";
     var getSongs = function (artist, callback, error) {
-        WinJS.xhr({ url: baseUrl+escape(artist), responseType: "blob" }).done(
+        WinJS.xhr({ url: baseUrl+escape(artist), responseType: "json" }).done(
         function (request) {
             var obj = JSON.parse(request.response);
-            if(!obj.items || obj.items.length == 0) {
+            if(!obj.data.items || obj.data.items.length == 0) {
                 error();
                 return;
             }
 
-            var song = obj.items[0];
+            var song = obj.data.items[0];
             var songData = {
                 "url": song.player.default,
                 "thumbnail": (song.thumbnail.hqDefault ?
