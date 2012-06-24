@@ -8,6 +8,7 @@
 }
 
 #instructions {
+    display: none;
     font-size: 36px;
     position: absolute;
     top: 240px;
