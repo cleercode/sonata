@@ -39,6 +39,7 @@
             //Lastfm.getEvents(function () { });
             $('form').submit(function () {
                 var artist = $('#artist').val();
+                while (list.pop()) { };
                 Lastfm.getSimilarArtists(artist,
                     function (artists) {
                         artists.forEach(function (artist) {
