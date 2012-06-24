@@ -35,8 +35,23 @@
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\default.js">
       <PackagePath>js\default.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\jquery-1.7.2.min.js">
+      <PackagePath>js\jquery-1.7.2.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\lastfm.api.cache.js">
+      <PackagePath>js\lastfm.api.cache.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\lastfm.api.js">
+      <PackagePath>js\lastfm.api.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\lastfm.api.md5.js">
+      <PackagePath>js\lastfm.api.md5.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\css\default.css">
       <PackagePath>css\default.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\packages.config">
+      <PackagePath>packages.config</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

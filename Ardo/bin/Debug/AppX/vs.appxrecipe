@@ -16,13 +16,13 @@
     <AppXManifest Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-06-23T21:51:44.861</Modified>
+      <Modified>2012-06-23T22:11:21.180</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2012-06-23T21:53:58.219</Modified>
+      <Modified>2012-06-23T22:18:00.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
@@ -46,15 +46,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2012-04-23T20:59:30.000</Modified>
+      <Modified>2012-06-23T22:21:00.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\jquery-1.7.2.min.js">
+      <PackagePath>js\jquery-1.7.2.min.js</PackagePath>
+      <Modified>2012-06-23T22:08:57.629</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\lastfm.api.cache.js">
+      <PackagePath>js\lastfm.api.cache.js</PackagePath>
+      <Modified>2012-06-23T22:00:29.651</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\lastfm.api.js">
+      <PackagePath>js\lastfm.api.js</PackagePath>
+      <Modified>2012-06-23T21:59:35.899</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\js\lastfm.api.md5.js">
+      <PackagePath>js\lastfm.api.md5.js</PackagePath>
+      <Modified>2012-06-23T21:59:35.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\css\default.css">
       <PackagePath>css\default.css</PackagePath>
       <Modified>2012-06-23T21:55:27.763</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\packages.config">
+      <PackagePath>packages.config</PackagePath>
+      <Modified>2012-06-23T22:10:14.843</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Chris\Documents\Visual Studio 2012\Projects\Ardo\Ardo\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-06-23T21:51:44.760</Modified>
+      <Modified>2012-06-23T22:11:21.083</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

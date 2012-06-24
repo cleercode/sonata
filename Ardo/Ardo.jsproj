@@ -32,7 +32,7 @@
     <ProjectConfiguration Include="Release|x86">
       <Configuration>Release</Configuration>
       <Platform>x86</Platform>
-    </ProjectConfiguration>  
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>f95c5971-6236-4721-9079-772c7e5c4856</ProjectGuid>
@@ -57,6 +57,11 @@
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\lastfm.api.cache.js" />
+    <Content Include="js\lastfm.api.js" />
+    <Content Include="js\lastfm.api.md5.js" />
+    <Content Include="packages.config" />
     <None Include="Ardo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
