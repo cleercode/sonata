@@ -34,12 +34,16 @@
             listView.oniteminvoked = this.itemInvoked.bind(this);
 
             this.initializeLayout(listView, appView.value);
-            listView.element.focus();
+            $('#artist').focus();
+
+            if (list.length === 0) {
+                $('#instructions').show();
+            }
 
             //Lastfm.getEvents(function () { });
             // TODO: there is a concurrency bug here =[
             $('form').submit(function () {
-                $('#instructions').hide();
+                WinJS.UI.Animation.fadeOut(document.getElementById('instructions'));
                 var artist = $('#artist').val();
                 if (artist == "") {
                     return false;
