@@ -20,15 +20,9 @@
         },
 
         itemInvoked: function (args) {
-            if (appView.value === appViewState.snapped) {
-                // If the page is snapped, the user invoked a group.
-                var group = Data.groups.getAt(args.detail.itemIndex);
-                nav.navigate("/pages/groupDetail/groupDetail.html", { groupKey: group.key });
-            } else {
-                // If the page is not snapped, the user invoked an item.
-                var item = Data.items.getAt(args.detail.itemIndex);
-                nav.navigate("/pages/itemDetail/itemDetail.html", { item: Data.getItemReference(item) });
-            }
+            // If the page is not snapped, the user invoked an item.
+            var artist = list.getAt(args.detail.itemIndex);
+            nav.navigate("/pages/itemDetail/itemDetail.html", { artist: artist });
         },
 
         // This function is called whenever a user navigates to this page. It
@@ -45,11 +39,10 @@
             //Lastfm.getEvents(function () { });
             $('form').submit(function () {
                 var artist = $('#artist').val();
-                while (list.pop()) { };
                 Lastfm.getSimilarArtists(artist,
                     function (artists) {
                         artists.forEach(function (artist) {
-                            artist.img = "url('" + artist.img + "')";
+                            artist.imgURL = "url('" + artist.img + "')";
                             list.push(artist);
                         });
                         list.notifyReload();
