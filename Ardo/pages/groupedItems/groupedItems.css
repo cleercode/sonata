@@ -1,5 +1,8 @@
-﻿header {
+﻿body {
     background: #c30;
+}
+    
+header {
     position: relative;
 }
 
@@ -39,12 +42,13 @@
         -ms-grid-columns: 1fr;
         -ms-grid-rows: 1fr 90px;
         display: -ms-grid;
-        height: 200px;
+        height: 180px;
         width: 200px;
     }
 
         .groupeditemspage .groupeditemslist .win-item .item-image {
             -ms-grid-row-span: 2;
+            width: 100%;
         }
 
         .groupeditemspage .groupeditemslist .win-item .item-overlay {
@@ -57,13 +61,13 @@
             .groupeditemspage .groupeditemslist .win-item .item-overlay .item-title {
                 -ms-grid-row: 1;
                 overflow: hidden;
-                width: 220px;
+                width: 200px;
             }
 
-            .groupeditemspage .groupeditemslist .win-item .item-overlay .item-subtitle {
+            /*.groupeditemspage .groupeditemslist .win-item .item-overlay .item-subtitle {
                 -ms-grid-row: 2;
                 width: 220px;
-            }
+            }*/
 
 @media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled) {
     .groupeditemspage .groupeditemslist .win-item .item-overlay {

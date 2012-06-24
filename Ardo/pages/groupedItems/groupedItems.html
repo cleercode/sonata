@@ -33,7 +33,8 @@
             onclick="WinJS.Navigation.navigate('/pages/groupDetail/groupDetail.html', { groupKey: event.srcElement.groupKey })" role="link"></p>
     </div>
 
-    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template" data-win-bind="style.backgroundImage: img">
+
         <img class="item-image" src="/images/splashscreen.png" data-win-bind="src: img; alt: name" />
         <div class="item-overlay">
             <h4 class="item-title" data-win-bind="textContent: name"></h4>
@@ -49,7 +50,7 @@
                 <span class="pagetitle">Ardo</span>
             </h1>
             <form>
-                <input type="text" name="artist" placeholder="Tell me your favorite musician!" />
+                <input id="artist" type="text" name="artist" placeholder="Tell me your favorite musician!" />
                 <button id="submit">Okay!</button>
             </form>
         </header>

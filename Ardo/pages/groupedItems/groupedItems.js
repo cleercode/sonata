@@ -45,9 +45,11 @@
             //Lastfm.getEvents(function () { });
             $('form').submit(function () {
                 var artist = $('#artist').val();
+                while (list.pop()) { };
                 Lastfm.getSimilarArtists(artist,
                     function (artists) {
                         artists.forEach(function (artist) {
+                            //artist.img = "url('" + artist.img + "')";
                             list.push(artist);
                         });
                         list.notifyReload();
