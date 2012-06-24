@@ -1,7 +1,13 @@
 ﻿header {
     background: #c30;
-    padding: 20px;
+    position: relative;
 }
+
+    header form {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
 
 /* This selector is used to prevent ui-dark/light.css from overwriting changes
    to .win-surface. */

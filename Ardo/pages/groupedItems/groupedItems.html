@@ -33,11 +33,12 @@
         <p class="group-title win-type-x-large" data-win-bind="textContent: title; groupKey: key" 
             onclick="WinJS.Navigation.navigate('/pages/groupDetail/groupDetail.html', { groupKey: event.srcElement.groupKey })" role="link"></p>
     </div>
+
     <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
-        <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+        <img class="item-image" src="#" data-win-bind="src: img; alt: name" />
         <div class="item-overlay">
-            <h4 class="item-title" data-win-bind="textContent: title"></h4>
-            <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>
+            <h4 class="item-title" data-win-bind="textContent: name"></h4>
+            <!--<h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>-->
         </div>
     </div>
 
@@ -48,20 +49,14 @@
             <h1 class="titlearea win-type-ellipsis">
                 <span class="pagetitle">Ardo</span>
             </h1>
+            <form>
+                <input type="text" name="artist" placeholder="Tell me your favorite musician!" />
+                <button id="submit">Okay!</button>
+            </form>
         </header>
         <section aria-label="Main content" role="main">
             <div class="groupeditemslist" aria-label="List of groups" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
         </section>
     </div>
-    <div class="artistTemplate" data-win-control="WinJS.Binding.Template">
-        <div class="artist" data-win-bind="style.background: photo"></div>
-    </div>
-    <header>
-        <form>
-            <input type="text" name="artist" placeholder="Tell me your favorite musician!" />
-            <button id="submit">Okay!</button>
-        </form>
-    </header>
-    <div id="artists"></div>
 </body>
 </html>
