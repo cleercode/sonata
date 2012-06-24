@@ -1,4 +1,4 @@
-Pinboard/bin
-Pinboard/bld
+*/bin
+*/bld
 *.user
 *.suo
