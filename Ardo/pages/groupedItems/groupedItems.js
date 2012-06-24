@@ -42,7 +42,7 @@
             this.initializeLayout(listView, appView.value);
             listView.element.focus();
 
-            Lastfm.getEvents(function () { });
+            //Lastfm.getEvents(function () { });
             $('form').submit(function () {
                 var artist = $('#artist').val();
                 Lastfm.getSimilarArtists(artist,
