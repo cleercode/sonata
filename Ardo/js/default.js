@@ -59,10 +59,19 @@
         //        alert('Unable to retrieve data from last.fm');
         //    }
         //});
-        var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=cher&api_key=b25b959554ed76058ac220b7b2e0a026&format=json";
+        var artist = escape(artist);
+        var key = "b25b959554ed76058ac220b7b2e0a026";
+        var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + artist + "&api_key=" + key + "&format=json";
         WinJS.xhr({ url: url, responseType: "json" })
             .done(function complete(result) {
-                console.log(result);
+                var obj = JSON.parse(result.response);
+                var similarArtists = obj.similarartists.artist;
+                similarArtists.forEach(function (artist) {
+                    var photo = artist.image[3]["#text"];
+                    if (photo !== "") {
+                        console.log(photo);
+                    }
+                });
             });
     };
 
